@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>SH.Framework.OpenApi.Implementation</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Muharrem Kaçkın</Authors>
     <Company>Strawhats Company</Company>
     <Description>A comprehensive implementation layer for OpenAPI integration in ASP.NET Core projects. This package provides extension methods and helpers for customizing OpenAPI schema generation, including friendly schema reference IDs and configuration registration.</Description>
@@ -27,13 +26,18 @@
       v1.0.0:
       - Initial release with custom schema reference ID and OpenAPI configuration extensions.
     </PackageReleaseNotes>
-    <TargetFrameworks>net9.0;net10.0;net8.0</TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
     <LangVersion>14</LangVersion>
   </PropertyGroup>  
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.5" />
   </ItemGroup>
+
+	<ItemGroup>
+		<None Include="./../LICENSE" Pack="true" PackagePath="" />
+		<None Include="./../README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 
 </Project>

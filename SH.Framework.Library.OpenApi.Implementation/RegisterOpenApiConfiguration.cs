@@ -7,10 +7,7 @@ public static class RegisterOpenApiConfiguration
     public static IServiceCollection AddOpenApiConfiguration(this IServiceCollection services) {
         services.AddOpenApi(options =>
         {
-            options.CreateSchemaReferenceId = context =>
-            {
-                return OpenApiExtensions.CreateFriendlyId(context.Type);
-            };
+            options.CreateSchemaReferenceId = context => OpenApiExtensions.CreateFriendlyId(context.Type);
         });
 
         return services;
